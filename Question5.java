@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Question5
 {
@@ -27,6 +28,32 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
+    int num = in.nextInt();
+
+        // Read in the integers
+        ArrayList<Integer> numbers = new ArrayList<>();
+        for (int i = 0; i < num; i++) {
+            int value = in.nextInt();
+            numbers.add(value);
+        }
+
+        // Calculate the mode
+        int mode = 0;
+        int max = 0;
+        for (int i = 0; i < num; i++) {
+            int count = 0;
+            for (int j = 0; j < num; j++) {
+                if (numbers.get(j) == numbers.get(i)) {
+                    count++;
+                }
+            }
+            if (count > max) {
+                max = count;
+                mode = numbers.get(i);
+            }
+        }
+
+    System.out.print(mode);
     
   }
 }
