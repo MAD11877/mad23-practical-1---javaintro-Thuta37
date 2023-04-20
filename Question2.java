@@ -11,8 +11,12 @@ public class Question2
      */
      
     Scanner in = new Scanner(System.in);
-    /** double height = in.nextDouble();
-      *double weight = in.nextDouble();
+    
+    double height;
+    double weight;  
+    
+    /**height = in.nextDouble();
+      *weight = in.nextDouble();
     */
     double bmi = weight/(height * height);
     
